@@ -3,12 +3,15 @@ import React from 'react';
 // in both URLs and html attributes
 import slugify from 'slugify';
 import OptionComponent from './OptionComponent';
+import  FEATURES from '../Features';
+
+
 
 function Customize(props) {
-
-  const features = Object.keys(props.features).map((feature, idx) => {
+  console.log(FEATURES)
+  const features = Object.keys(FEATURES).map((feature, idx) => {
     const featureHash = feature + '-' + idx;
-    const options = props.features[feature].map(option => {
+    const options = FEATURES[feature].map(option => {
       const itemHash = slugify(JSON.stringify(option));
       return (
         <OptionComponent 
