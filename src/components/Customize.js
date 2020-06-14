@@ -15,6 +15,7 @@ function Customize(props) {
       const itemHash = slugify(JSON.stringify(option));
       return (
         <OptionComponent 
+          key = {itemHash}
           itemHash={itemHash} 
           slugify={slugify} 
           feature={feature} 
